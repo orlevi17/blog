@@ -79,13 +79,13 @@ nav {
 				color: #fff;
 			}
 			
-            nav ul li.subscribe_rss_img img {
+            nav ul li#subscribe_rss_img img {
                 margin-top: 12px;
                 margin-left: 15px;
 				text-align: left;
 			}
 
-			nav ul li.subscribe a {
+			nav ul li#subscribe a {
                 margin-left: 7px;
 				text-align: left;
 			}

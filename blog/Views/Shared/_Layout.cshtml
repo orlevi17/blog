@@ -3,6 +3,8 @@
 <head>
     <title>Browser Page title</title>
     <link rel="stylesheet" href="~/Content/main.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqHandleLayoutEvent.js"></script>
 </head>
 <body>
     <header>
@@ -11,15 +13,21 @@
             <source src="backgorundSong.mp3" type="audio/mpeg">
         </audio>
     </header>
-    <nav>
+    <nav id="menu">
         <!-- Navigation -->
         <ul>
-            <li class="selected">@Html.ActionLink("Blog", "Index", "Home")</li>
+            <li>@Html.ActionLink("Blog", "Index", "Home")</li>
             <li><a href="#">About</a></li>
-            <li>@Html.ActionLink("Fan Club", "Index", "Fans")</li>
+            <li>@Html.ActionLink("Fan Club", "Index", "Fan")</li>
             <li><a href="#">Contact</a></li>
-            <li class="subscribe_rss_img"><div id="transDemo2"><div class="hover"><img src="~/Content/images/rss.png" width="18" height="18"></div></div></li>
+            <li id="subscribe_rss_img"><div id="transDemo2"><div class="hover"><img src="~/Content/images/rss.png" width="18" height="18"></div></div></li>
+            <li id="subscribe"><a href="#">Subscribe via. RSS</a></li>
+
+            <!--
+                        <li class="subscribe_rss_img"><div id="transDemo2"><div class="hover"><img src="~/Content/images/rss.png" width="18" height="18"></div></div></li>
             <li class="subscribe"><a href="#">Subscribe via. RSS</a></li>
+                
+                -->
         </ul>
     </nav>
     <section id="intro">

@@ -13,6 +13,8 @@ C:\Files\WebProject\blog\blog\bin\roslyn\VBCSCompiler.exe.config
 C:\Files\WebProject\blog\blog\bin\blog.dll.config
 C:\Files\WebProject\blog\blog\bin\blog.dll
 C:\Files\WebProject\blog\blog\bin\blog.pdb
+C:\Files\WebProject\blog\blog\bin\EntityFramework.dll
+C:\Files\WebProject\blog\blog\bin\EntityFramework.SqlServer.dll
 C:\Files\WebProject\blog\blog\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Files\WebProject\blog\blog\bin\Microsoft.Web.Infrastructure.dll
 C:\Files\WebProject\blog\blog\bin\System.Web.Helpers.dll
@@ -21,6 +23,8 @@ C:\Files\WebProject\blog\blog\bin\System.Web.Razor.dll
 C:\Files\WebProject\blog\blog\bin\System.Web.Webpages.Deployment.dll
 C:\Files\WebProject\blog\blog\bin\System.Web.Webpages.dll
 C:\Files\WebProject\blog\blog\bin\System.Web.Webpages.Razor.dll
+C:\Files\WebProject\blog\blog\bin\EntityFramework.xml
+C:\Files\WebProject\blog\blog\bin\EntityFramework.SqlServer.xml
 C:\Files\WebProject\blog\blog\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Files\WebProject\blog\blog\bin\System.Web.Razor.xml
 C:\Files\WebProject\blog\blog\bin\System.Web.Webpages.xml
@@ -28,6 +32,5 @@ C:\Files\WebProject\blog\blog\bin\System.Web.Webpages.Deployment.xml
 C:\Files\WebProject\blog\blog\bin\System.Web.Webpages.Razor.xml
 C:\Files\WebProject\blog\blog\bin\System.Web.Helpers.xml
 C:\Files\WebProject\blog\blog\bin\System.Web.Mvc.xml
-C:\Files\WebProject\blog\blog\obj\Debug\blog.csprojResolveAssemblyReference.cache
 C:\Files\WebProject\blog\blog\obj\Debug\blog.dll
 C:\Files\WebProject\blog\blog\obj\Debug\blog.pdb
