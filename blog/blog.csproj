@@ -97,6 +97,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\flower.png" />
+    <Content Include="Content\images\intro_background.png" />
+    <Content Include="Content\images\intro_flower.png" />
+    <Content Include="Content\images\intro_shauli.png" />
+    <Content Include="Content\images\nav_background.png" />
+    <Content Include="Content\images\posts\fastandfurious.jpg" />
+    <Content Include="Content\images\posts\onlythestrongsurvive.jpg" />
+    <Content Include="Content\images\rss.png" />
+    <Content Include="Content\images\sidebar_background.png" />
+    <Content Include="Content\images\sidebar_section_background.png" />
     <Content Include="Content\main.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -163,7 +173,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\images\" />
     <Folder Include="Utils\" />
   </ItemGroup>
   <PropertyGroup>

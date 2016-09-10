@@ -53,11 +53,12 @@ namespace blog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,Author,AuthorWebsiteUrl,Date,Content,Image,Video")] Post post)
+        public ActionResult Create([Bind(Include = "ID,Title,Author,AuthorWebsiteUrl,Content,Image,Video")] Post post)
         {
             if (ModelState.IsValid)
             {
                 post.ID = Guid.NewGuid();
+                post.Date = DateTime.Now;
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");

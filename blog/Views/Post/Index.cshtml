@@ -27,12 +27,14 @@
             <label for="minPostComments">Minimum post comments</label>
             <input name="minPostComments" id="minPostComments" min="0" max="10" type="range" />
         </p>
-        <p><input type="submit" value="Search post" /></p>
+        <p><input id="search_btn" name="search_btn" type="submit" value="Search post" /></p>
     </form>
 </section>
+@{int itemCount = 0; }|
 
 @foreach (var item in Model)
 {
+    itemCount++;
     <hr />
 <section>
     <article class="blogPost">
@@ -45,13 +47,13 @@
 
             @if (!String.IsNullOrEmpty(item.Image))
             {
-                <img src="~/Content/images/@Html.DisplayFor(modelItem => item.Image)" alt="@Html.DisplayFor(modelItem => item.Image)" />
+                <img src="~/Content/images/posts/@item.Image" alt="@item.Image" />
             }
 
             @if (!String.IsNullOrEmpty(item.Video))
             {
                 <video controls="controls">
-                    <source src="~/Content/videos/item.Video" type="video/mp4" />
+                    <source src="~/Content/videos/posts/@item.Video" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             }
@@ -78,24 +80,29 @@
         </article>
     }
 </section>
-<form action="#" method="post">
-    <h3>Post a comment</h3>
-    <p>
-        <label for="name">Name</label>
-        <input name="name" id="name" type="text" required />
-    </p>
-    <p>
-        <label for="email">E-mail</label>
-        <input name="email" id="email" type="email" required />
-    </p>
-    <p>
-        <label for="website">Website</label>
-        <input name="website" id="website" type="url" />
-    </p>
-    <p>
-        <label for="comment">Comment</label>
-        <textarea name="comment" id="comment" required></textarea>
-    </p>
-    <p><input type="submit" value="Post comment" /></p>
-</form>
+
+    @Html.BeginForm("Create", "Comment", FormMethod.Post, new { id = "form_" + itemCount })
+    {
+        <h3>Post a comment</h3>
+        <p>
+            <input name="PostID_@itemCount" id="PostID_@itemCount" value="@item.ID" />
+        </p>
+        <p>
+            <label for="Title_@itemCount">Title</label>
+            <textarea name="Title_@itemCount" id="Title_@itemCount" required></textarea>
+        </p>
+        <p>
+            <label for="Author_@itemCount">Name</label>
+            <input name="Author_@itemCount" id="Author_@itemCount" type="text" required />
+        </p>
+        <p>
+            <label for="AuthorWebsiteUrl_@itemCount">Website</label>
+            <input name="AuthorWebsiteUrl_@itemCount" id="AuthorWebsiteUrl_@itemCount" type="url" />
+        </p>
+        <p>
+            <label for="Content_@itemCount">Content</label>
+            <textarea name="Content_@itemCount" id="Content_@itemCount" required></textarea>
+        </p>
+        <p><input id="submit_comment_btn_@itemCount" name="submit_comment_btn_@itemCount" type="submit" value="Post comment" /></p>
+    }
 }

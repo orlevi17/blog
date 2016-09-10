@@ -69,11 +69,12 @@ namespace blog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CommentID,PostID,Title,Author,AuthorWebsiteUrl,Content,Date")] Comment comment)
+        public ActionResult Create([Bind(Include = "CommentID,PostID,Title,Author,AuthorWebsiteUrl,Content")] Comment comment)
         {
             if (ModelState.IsValid)
             {
                 comment.CommentID = Guid.NewGuid();
+                comment.Date = DateTime.Now;
                 db.Comments.Add(comment);
                 db.SaveChanges();
                 return RedirectToAction("Index");
