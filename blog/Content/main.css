@@ -62,7 +62,7 @@ nav {
 		
 			nav ul li a {
 				display: block;
-				margin-right: 20px;
+				margin-right: 10px;
 				width: 140px;
 				font-size: 14px;
 				line-height: 44px;
@@ -81,7 +81,7 @@ nav {
 			
             nav ul li#subscribe_rss_img img {
                 margin-top: 12px;
-                margin-left: 15px;
+                margin-left: 7.5px;
 				text-align: left;
 			}
 
@@ -171,6 +171,7 @@ nav {
 		display: table-cell;
 		width: 620px;
 		padding-right: 22px;
+        padding-bottom: 45px;
 	}
 	
 	aside {
@@ -248,18 +249,18 @@ aside section {
 =COMMENTS
 ------------------------------*/
 
-#comments {
+.comments {
 	margin-top: 21px;
 	padding-top: 22px;
 	border-top: 1px solid #d7d7d7;
 }
 
-	#comments article {
+	.comments article {
 		display: table;
 		padding: 22px;
 	}
 	
-	#comments article:nth-child(odd) {
+	.comments article:nth-child(odd) {
 		padding: 21px;
 		background: #E3E3E3;
 		border: 1px solid #d7d7d7;
@@ -267,23 +268,23 @@ aside section {
 		-webkit-border-radius: 11px;
 	}
 	
-		#comments article header {
+		.comments article header {
 			display: table-cell;
 			width: 220px;
 			padding-right: 22px;
 		}
 		
-			#comments article header a {
+			.comments article header a {
 				display: block;
 				font-weight: bold;
 				color: #000;
 			}
 			
-				#comments article header a:hover {
+				.comments article header a:hover {
 					text-decoration: none;
 				}
 		
-		#comments article p {
+		.comments article p {
 			padding: 0;
 		}
 

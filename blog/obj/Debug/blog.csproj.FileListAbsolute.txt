@@ -34,3 +34,4 @@ C:\Files\WebProject\blog\blog\bin\System.Web.Helpers.xml
 C:\Files\WebProject\blog\blog\bin\System.Web.Mvc.xml
 C:\Files\WebProject\blog\blog\obj\Debug\blog.dll
 C:\Files\WebProject\blog\blog\obj\Debug\blog.pdb
+C:\Files\WebProject\blog\blog\obj\Debug\blog.csprojResolveAssemblyReference.cache
