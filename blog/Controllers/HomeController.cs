@@ -14,8 +14,8 @@ namespace blog.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            //return View("~/Views/Post/Index.cshtml", db.Posts.ToList());
-            return View();
+            return View("~/Views/Post/Index.cshtml", db.Posts.ToList());
+            //return View();
         }
     }
 }

@@ -80,29 +80,48 @@
         </article>
     }
 </section>
-
-    @Html.BeginForm("Create", "Comment", FormMethod.Post, new { id = "form_" + itemCount })
+    using (Html.BeginForm("Create2", "Comment", FormMethod.Post, new { id = "form_" + itemCount }))
     {
-        <h3>Post a comment</h3>
-        <p>
-            <input name="PostID_@itemCount" id="PostID_@itemCount" value="@item.ID" />
-        </p>
-        <p>
-            <label for="Title_@itemCount">Title</label>
-            <textarea name="Title_@itemCount" id="Title_@itemCount" required></textarea>
-        </p>
-        <p>
-            <label for="Author_@itemCount">Name</label>
-            <input name="Author_@itemCount" id="Author_@itemCount" type="text" required />
-        </p>
-        <p>
-            <label for="AuthorWebsiteUrl_@itemCount">Website</label>
-            <input name="AuthorWebsiteUrl_@itemCount" id="AuthorWebsiteUrl_@itemCount" type="url" />
-        </p>
-        <p>
-            <label for="Content_@itemCount">Content</label>
-            <textarea name="Content_@itemCount" id="Content_@itemCount" required></textarea>
-        </p>
-        <p><input id="submit_comment_btn_@itemCount" name="submit_comment_btn_@itemCount" type="submit" value="Post comment" /></p>
+        <section>
+            @Html.AntiForgeryToken()
+
+            <h3>Post a comment</h3>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <p>
+                <input type="hidden" name="PostID" value="@item.ID" class="form-control" />
+                @Html.ValidationMessage("PostID", "", new { @class = "text-danger" })
+            </p>
+
+            <p>
+                @Html.Label("Title", htmlAttributes: new { @class = "control-label col-md-2" })
+                <input tyep="text" name="Title" />
+                @Html.ValidationMessage("Title", "", new { @class = "text-danger" })
+            </p>
+
+            <p>
+                @Html.Label("Author", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.Editor("Author", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessage("Author", "", new { @class = "text-danger" })
+            </p>
+
+            <p>
+                @Html.Label("AuthorWebsiteUrl", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.Editor("AuthorWebsiteUrl", new { htmlAttributes = new { @class = "form-control", @type="url" } })
+                @Html.ValidationMessage("AuthorWebsiteUrl", "", new { @class = "Ur" })
+            </p>
+
+            <p>
+                @Html.Label("Content", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.TextArea("Content", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessage("Content", "", new { @class = "text-danger" })
+            </p>
+
+            <p>
+                <input type="submit" value="Post comment" class="btn btn-default" />
+            </p>
+        </section>
     }
+
 }

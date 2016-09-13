@@ -84,6 +84,24 @@ namespace blog.Controllers
             return View(comment);
         }
 
+        // POST: Comment/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create2([Bind(Include = "CommentID,PostID,Title,Author,AuthorWebsiteUrl,Content")] Comment comment)
+        {
+            if (ModelState.IsValid)
+            {
+                comment.CommentID = Guid.NewGuid();
+                comment.Date = DateTime.Now;
+                db.Comments.Add(comment);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index", "Post");
+        }
+
         // GET: Comment/Edit/5
         public ActionResult Edit(Guid? id)
         {
